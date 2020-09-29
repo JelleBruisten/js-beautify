@@ -28,15 +28,16 @@
 
 'use strict';
 
-var Beautifier = require('./beautifier').Beautifier,
-  Options = require('./options').Options;
+import { Beautifier } from './beautifier';
+import { Options } from './options';
 
 function style_html(html_source, options, js_beautify, css_beautify) {
   var beautifier = new Beautifier(html_source, options, js_beautify, css_beautify);
   return beautifier.beautify();
 }
 
-module.exports = style_html;
-module.exports.defaultOptions = function() {
+export default style_html;
+
+export const defaultOptions = function() {
   return new Options();
 };

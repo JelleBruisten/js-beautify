@@ -37,12 +37,12 @@ var debug = process.env.DEBUG_JSBEAUTIFY || process.env.JSBEAUTIFY_DEBUG ? funct
     console.error.apply(console, arguments);
 } : function() {};
 
-var fs = require('fs'),
-    cc = require('config-chain'),
-    beautify = require('../index'),
-    mkdirp = require('mkdirp'),
-    nopt = require('nopt'),
-    glob = require('glob');
+import fs from 'fs';
+import cc from 'config-chain';
+import beautify from '../index';
+import mkdirp from 'mkdirp';
+import nopt from 'nopt';
+import glob from 'glob';
 
 nopt.invalidHandler = function(key, val) {
     throw new Error(key + " was invalid with value \"" + val + "\"");
@@ -64,9 +64,9 @@ nopt.typeDefs.brace_style = {
         return true;
     }
 };
-var path = require('path'),
-    editorconfig = require('editorconfig'),
-    knownOpts = {
+import path from 'path';
+import editorconfig from 'editorconfig';
+var knownOpts = {
         // Beautifier
         "indent_size": Number,
         "indent_char": String,

@@ -28,7 +28,7 @@
 
 'use strict';
 
-var Pattern = require('./pattern').Pattern;
+import { Pattern } from './pattern';
 
 
 var template_names = {
@@ -188,4 +188,4 @@ TemplatablePattern.prototype._read_template = function() {
 };
 
 
-module.exports.TemplatablePattern = TemplatablePattern;
+export { TemplatablePattern };

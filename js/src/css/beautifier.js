@@ -28,10 +28,10 @@
 
 'use strict';
 
-var Options = require('./options').Options;
-var Output = require('../core/output').Output;
-var InputScanner = require('../core/inputscanner').InputScanner;
-var Directives = require('../core/directives').Directives;
+import { Options } from './options';
+import { Output } from '../core/output';
+import { InputScanner } from '../core/inputscanner';
+import { Directives } from '../core/directives';
 
 var directives_core = new Directives(/\/\*/, /\*\//);
 
@@ -478,4 +478,4 @@ Beautifier.prototype.beautify = function() {
   return sweetCode;
 };
 
-module.exports.Beautifier = Beautifier;
+export { Beautifier };

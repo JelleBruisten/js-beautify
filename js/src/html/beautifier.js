@@ -28,10 +28,10 @@
 
 'use strict';
 
-var Options = require('../html/options').Options;
-var Output = require('../core/output').Output;
-var Tokenizer = require('../html/tokenizer').Tokenizer;
-var TOKEN = require('../html/tokenizer').TOKEN;
+import { Options } from '../html/options';
+import { Output } from '../core/output';
+import { Tokenizer } from '../html/tokenizer';
+import { TOKEN } from '../html/tokenizer';
 
 var lineBreak = /\r\n|[\r\n]/;
 var allLineBreaks = /\r\n|[\r\n]/g;
@@ -862,4 +862,4 @@ Beautifier.prototype._do_optional_end_element = function(parser_token) {
   return result;
 };
 
-module.exports.Beautifier = Beautifier;
+export { Beautifier };

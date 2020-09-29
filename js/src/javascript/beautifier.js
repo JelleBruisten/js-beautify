@@ -28,14 +28,14 @@
 
 'use strict';
 
-var Output = require('../core/output').Output;
-var Token = require('../core/token').Token;
-var acorn = require('./acorn');
-var Options = require('./options').Options;
-var Tokenizer = require('./tokenizer').Tokenizer;
-var line_starters = require('./tokenizer').line_starters;
-var positionable_operators = require('./tokenizer').positionable_operators;
-var TOKEN = require('./tokenizer').TOKEN;
+import { Output } from '../core/output';
+import { Token } from '../core/token';
+import acorn from './acorn';
+import { Options } from './options';
+import { Tokenizer } from './tokenizer';
+import { line_starters } from './tokenizer';
+import { positionable_operators } from './tokenizer';
+import { TOKEN } from './tokenizer';
 
 
 function in_array(what, arr) {
@@ -1452,4 +1452,4 @@ Beautifier.prototype.handle_eof = function(current_token) {
   this.handle_whitespace_and_comments(current_token);
 };
 
-module.exports.Beautifier = Beautifier;
+export { Beautifier };

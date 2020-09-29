@@ -28,7 +28,7 @@
 
 'use strict';
 
-var BaseOptions = require('../core/options').Options;
+import { Options as BaseOptions } from '../core/options';
 
 function Options(options) {
   BaseOptions.call(this, options, 'html');
@@ -88,4 +88,4 @@ Options.prototype = new BaseOptions();
 
 
 
-module.exports.Options = Options;
+export { Options };

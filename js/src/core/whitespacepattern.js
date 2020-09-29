@@ -28,7 +28,7 @@
 
 'use strict';
 
-var Pattern = require('../core/pattern').Pattern;
+import { Pattern } from '../core/pattern';
 
 function WhitespacePattern(input_scanner, parent) {
   Pattern.call(this, input_scanner, parent);
@@ -100,6 +100,4 @@ WhitespacePattern.prototype.__split = function(regexp, input_string) {
   return result;
 };
 
-
-
-module.exports.WhitespacePattern = WhitespacePattern;
+export { WhitespacePattern };

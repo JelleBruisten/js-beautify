@@ -28,13 +28,13 @@
 
 'use strict';
 
-var InputScanner = require('../core/inputscanner').InputScanner;
-var BaseTokenizer = require('../core/tokenizer').Tokenizer;
-var BASETOKEN = require('../core/tokenizer').TOKEN;
-var Directives = require('../core/directives').Directives;
-var acorn = require('./acorn');
-var Pattern = require('../core/pattern').Pattern;
-var TemplatablePattern = require('../core/templatablepattern').TemplatablePattern;
+import { InputScanner } from '../core/inputscanner';
+import { Tokenizer as BaseTokenizer } from '../core/tokenizer';
+import { TOKEN as BASETOKEN } from '../core/tokenizer';
+import { Directives } from '../core/directives';
+import acorn from './acorn';
+import { Pattern } from '../core/pattern';
+import { TemplatablePattern } from '../core/templatablepattern';
 
 
 function in_array(what, arr) {
@@ -560,7 +560,6 @@ Tokenizer.prototype._read_string_recursive = function(delimiter, allow_unescaped
   return resulting_string;
 };
 
-module.exports.Tokenizer = Tokenizer;
-module.exports.TOKEN = TOKEN;
-module.exports.positionable_operators = positionable_operators.slice();
-module.exports.line_starters = line_starters.slice();
+export { Tokenizer, TOKEN };
+export const positionable_operators = positionable_operators.slice();
+export const line_starters = line_starters.slice();

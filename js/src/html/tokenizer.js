@@ -28,11 +28,11 @@
 
 'use strict';
 
-var BaseTokenizer = require('../core/tokenizer').Tokenizer;
-var BASETOKEN = require('../core/tokenizer').TOKEN;
-var Directives = require('../core/directives').Directives;
-var TemplatablePattern = require('../core/templatablepattern').TemplatablePattern;
-var Pattern = require('../core/pattern').Pattern;
+import { Tokenizer as BaseTokenizer } from '../core/tokenizer';
+import { TOKEN as BASETOKEN } from '../core/tokenizer';
+import { Directives } from '../core/directives';
+import { TemplatablePattern } from '../core/templatablepattern';
+import { Pattern } from '../core/pattern';
 
 var TOKEN = {
   TAG_OPEN: 'TK_TAG_OPEN',
@@ -328,5 +328,4 @@ Tokenizer.prototype._read_content_word = function(c) {
   }
 };
 
-module.exports.Tokenizer = Tokenizer;
-module.exports.TOKEN = TOKEN;
+export { Tokenizer, TOKEN };

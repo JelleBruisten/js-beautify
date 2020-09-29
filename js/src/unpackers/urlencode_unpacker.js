@@ -100,5 +100,5 @@ var Urlencoded = {
 };
 
 if (isNode) {
-  module.exports = Urlencoded;
+  export default Urlencoded;
 }

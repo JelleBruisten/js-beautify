@@ -28,10 +28,10 @@
 
 'use strict';
 
-var InputScanner = require('../core/inputscanner').InputScanner;
-var Token = require('../core/token').Token;
-var TokenStream = require('../core/tokenstream').TokenStream;
-var WhitespacePattern = require('./whitespacepattern').WhitespacePattern;
+import { InputScanner } from '../core/inputscanner';
+import { Token } from '../core/token';
+import { TokenStream } from '../core/tokenstream';
+import { WhitespacePattern } from './whitespacepattern';
 
 var TOKEN = {
   START: 'TK_START',
@@ -136,5 +136,4 @@ Tokenizer.prototype._readWhitespace = function() {
 
 
 
-module.exports.Tokenizer = Tokenizer;
-module.exports.TOKEN = TOKEN;
+export { Tokenizer, TOKEN };
